@@ -37,7 +37,7 @@ else if(itemId==280)//If your item is a stick
 
         {
 
-                addItemInventory(57,255);//Add 5 Dirt blocks to your inventory.
+                addItemInventory(57,64);//Add 5 Dirt blocks to your inventory.
 
                 print("Hay. :D");
      }
