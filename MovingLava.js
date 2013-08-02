@@ -5,11 +5,3 @@ function useItem(x,y,z,itemId,blockId)
                 print("HAY WORLD :D");
         }       
 }
-function attackHook(attacker, victim)
-{
-        if(getCarriedItem()==280)//If your item is a stick
-        {
-                preventDefault();//Don't call the real attack function after
-                setVelY(victim,1.5);//Make them fly vertically =)
-        }
-}
