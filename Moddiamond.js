@@ -1,4 +1,3 @@
-
 function buildCube(x,y,z,dim)
 {
 for(var i=0;i<dim;i++)
@@ -40,7 +39,7 @@ else if(itemId==280)//If your item is a stick
 
                 addItemInventory(57,255);//Add 5 Dirt blocks to your inventory.
 
-                print("Hay 😜");
+                print("Hay. :D");
      }
 
 }
