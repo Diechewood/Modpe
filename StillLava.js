@@ -1,3 +1,4 @@
+//taken from thread at http://www.minecraftforum.net/topic/1920654-mod-pe-script-mod-cube-and-diamond-mod/
 function buildCube(x,y,z,dim)
 {
 for(var i=0;i<dim;i++)
@@ -39,7 +40,8 @@ else if(itemId==280)//If your item is a stick
 
                 addItemInventory(11,64);//Add 5 Dirt blocks to your inventory.
 
-                print("Hay. :D");
+                print("HAY WORLD :D");
      }
+
 
 }
