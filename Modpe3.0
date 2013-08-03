@@ -3,6 +3,6 @@ function useItem(x,y,z,itemId,blockId)
         if(itemId==280)//If your item is a stick
         {
                 addItemInventory(48,5);//Add 5 Dirt blocks to your inventory.
-                clientMessage("HAY TURD BTW OCTOGAN")í¸œ");
+                clientMessage("HAY TURD BTW OCTOGAN");
                 setNightMode(isNight)
         }
