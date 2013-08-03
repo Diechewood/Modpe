@@ -4,6 +4,6 @@ function useItem(x,y,z,itemId,blockId)
         {
                 addItemInventory(48,5);//Add 5 Dirt blocks to your inventory.
                 clientMessage("HAY TURD BTW OCTOGAN");
-                setNightMode(isNight)
+                setNightMode(14500)
         }
 }
