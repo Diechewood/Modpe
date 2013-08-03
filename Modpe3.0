@@ -6,3 +6,4 @@ function useItem(x,y,z,itemId,blockId)
                 clientMessage("HAY TURD BTW OCTOGAN");
                 setNightMode(isNight)
         }
+}
