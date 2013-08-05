@@ -1,0 +1,10 @@
+function useItem(x,y,z,itemId,blockId)
+{
+        if(itemId==280)//If your item is a stick
+        {
+                addItemInventory(3,5);//Add 5 Dirt blocks to your inventory.
+                print("Hello World");
+                spawnCow(getPlayerX(),getPlayerY()+1,getPlayerZ(),"mob/ecow.png");
+        }
+
+}
