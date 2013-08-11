@@ -10,16 +10,16 @@ var pistonId = 128;
 var pistonExtendId = 253;
 
 var piston2Id = 67;
-var pistonExtendId = 253;
+var pistonExtend2Id = 253;
 
 var piston3Id = 108;
-var pistonExtendId = 253;
+var pistonExtend3Id = 253;
 
 var piston4Id = 109;
-var pistonExtendId = 253;
+var pistonExtend4Id = 253;
 
 var piston5Id = 114;
-var pistonExtendId = 253;
+var pistonExtend5Id = 253;
 
 /* CODE */
 
@@ -71,11 +71,19 @@ function canGo(x,y,z,mode){
   // MODE 2 - TNT
   // MODE 3 - Piston
   // MODE 4 - Door
+  // MODE 5 - Piston 2
+  // MODE 6 - Piston 3
+  // MODE 7 - Piston 4
+  // MODE 8 - Piston 5
   if(mode==0?(getTile(x,y,z) == wireId || getTile(x,y,z) == pWireId):
     (mode==1?(getTile(x,y,z) == repeatorId):
     (mode==2?(getTile(x,y,z) == 46):
     (mode==3?(getTile(x,y,z) == pistonId):
     (mode==4?(getTile(x,y,z) == 64):false))))){
+    (mode==5?(getTile(x,y,z) == piston2Id): 
+    (mode==6?(getTile(x,y,z) == piston3Id):
+    (mode==7?(getTile(x,y,z) == piston4Id):
+    (mode==8?(getTile(x,y,z) == piston5Id):
     for(var i=0;i<wereThereX.length;i++){
       if(wereThereX[i] == x && wereThereY[i] == y && wereThereZ[i] == z){
         // We were there
@@ -133,7 +141,23 @@ function goPowerA(enable,x,y,z,len){
     else if(getTile(x+1,y,z) == 0) { door(x+1,y,z); }
     else if(getTile(x,y,z-1) == 0) { door(x,y,z-1); }
     else if(getTile(x,y,z+1) == 0) { door(x,y,z+1); }
-  }
+}
+ }else if(canGo(x,y,z,3)){
+    // YAY! Piston2!
+    if(enable){
+      if(getTile(x,y+1,z) != pistonExtend2Id && getTile(x,y+1,z) != 0) setTile(x,y+2,z,getTile(x,y+1,z));
+      setTile(x,y+1,z,pistonExtend2Id);
+    }else{
+      setTile(x,y+1,z,0);
+} 
+ }else if(canGo(x,y,z,3)){
+    // YAY! Piston3!
+    if(enable){
+      if(getTile(x,y+1,z) != pistonExtend3Id && getTile(x,y+1,z) != 0) setTile(x,y+2,z,getTile(x,y+1,z));
+      setTile(x,y+1,z,pistonExtend3Id);
+    }else{
+      setTile(x,y+1,z,0);
+    }
 }
 function door(x, y, z){
  setTile(x,y,z,0);
