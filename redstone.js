@@ -157,8 +157,23 @@ function goPowerA(enable,x,y,z,len){
       setTile(x,y+1,z,pistonExtend3Id);
     }else{
       setTile(x,y+1,z,0);
-    }
 }
+ }else if(canGo(x,y,z,3)){
+    // YAY! Piston4!
+    if(enable){
+      if(getTile(x,y+1,z) != pistonExtend4Id && getTile(x,y+1,z) != 0) setTile(x,y+2,z,getTile(x,y+1,z));
+      setTile(x,y+1,z,pistonExtend4Id);
+    }else{
+      setTile(x,y+1,z,0);
+      
+}else if(canGo(x,y,z,3)){
+    // YAY! Piston2!
+    if(enable){
+      if(getTile(x,y+1,z) != pistonExtend5Id && getTile(x,y+1,z) != 0) setTile(x,y+2,z,getTile(x,y+1,z));
+      setTile(x,y+1,z,pistonExtend5Id);
+    }else{
+      setTile(x,y+1,z,0);
+} 
 function door(x, y, z){
  setTile(x,y,z,0);
  setTile(x,y,z,1);
