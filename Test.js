@@ -1,10 +1,15 @@
 function useItem(x,y,z,itemId,blockId,side)
 {
-        if(itemId==259)//Tap Nether Rack
+        if(blockId==87)//Tap Nether Rack
         {
                 spawnPigZombie(x, y, z, 276, "mob/Herobrine.png");
                 clientMessage("eiD lliW ouY");
-                setNightMode(isNight); 
+                setNightMode(14500); 
+                spawnPigZombie(x, y, z, 278, "mob/Herobrine.png");
+                spawnPigZombie(x, y, z, 276, "mob/Herobrine.png");
+                spawnPigZombie(x, y, z, 278, "mob/Herobrine.png");
+                spawnPigZombie(x, y, z, 278, "mob/Herobrine.png");
+                spawnPigZombie(x, y, z, 276, "mob/Herobrine.png");
         }
 
 }
